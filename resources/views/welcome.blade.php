@@ -25,7 +25,7 @@
         <section>
             <x-section-heading>Tags</x-section-heading>
 
-            <div class="grid grid-cols-3 md:grid-cols-10 gap-3 mt-6">
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-10 gap-3 mt-6">
                 <x-tag>Tag</x-tag>
                 <x-tag>Tag</x-tag>
                 <x-tag>Tag</x-tag>

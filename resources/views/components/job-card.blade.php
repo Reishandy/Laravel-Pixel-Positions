@@ -7,7 +7,7 @@
     </div>
 
     <div class="flex justify-between items-center mt-auto">
-        <div>
+        <div class="flex flex-wrap gap-2 h-max">
             <x-tag size="small">Tag</x-tag>
             <x-tag size="small">Tag</x-tag>
             <x-tag size="small">Tag</x-tag>
