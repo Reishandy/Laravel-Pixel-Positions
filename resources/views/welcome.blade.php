@@ -7,7 +7,7 @@
                 <div class="relative max-w-xl mx-auto">
                     <input type="text" placeholder="Full-Stack Developer"
                            class="rounded-xl bg-white/5 border-white/10 px-5 py-4 w-full border focus:outline-none focus:border-main transition-colors duration-300">
-                    <span class="w-4 h-4 bg-white absolute top-1/2 right-5 transform -translate-y-1/2"></span>
+                    <span class="w-4 h-4 bg-main absolute top-1/2 right-5 transform -translate-y-1/2"></span>
                 </div>
             </form>
         </section>
@@ -43,6 +43,24 @@
             <x-section-heading>Recent Jobs</x-section-heading>
 
             <div class="mt-6 space-y-6">
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
+                <x-job-card-wide></x-job-card-wide>
                 <x-job-card-wide></x-job-card-wide>
                 <x-job-card-wide></x-job-card-wide>
                 <x-job-card-wide></x-job-card-wide>
