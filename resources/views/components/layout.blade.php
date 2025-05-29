@@ -23,14 +23,14 @@
         </div>
 
         <div class="space-x-6 font-bold">
-            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Jobs</a>
-            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Careers</a>
-            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Salaries</a>
-            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Companies</a>
+            <a href="#" class="hover:text-main transition-colors duration-300">Jobs</a>
+            <a href="#" class="hover:text-main transition-colors duration-300">Careers</a>
+            <a href="#" class="hover:text-main transition-colors duration-300">Salaries</a>
+            <a href="#" class="hover:text-main transition-colors duration-300">Companies</a>
         </div>
 
         <div>
-            <a href="#">Post a Job</a>
+            <a href="#" class="hover:text-main transition-colors duration-300">Post a Job</a>
         </div>
     </nav>
 

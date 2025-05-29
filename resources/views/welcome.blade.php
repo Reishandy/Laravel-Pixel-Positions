@@ -6,7 +6,7 @@
             <form action="" class="mt-6 relative">
                 <div class="relative max-w-xl mx-auto">
                     <input type="text" placeholder="Full-Stack Developer"
-                           class="rounded-xl bg-white/5 border-white/10 px-5 py-4 w-full border focus:outline-none focus:border-blue transition-colors duration-300">
+                           class="rounded-xl bg-white/5 border-white/10 px-5 py-4 w-full border focus:outline-none focus:border-main transition-colors duration-300">
                     <span class="w-4 h-4 bg-white absolute top-1/2 right-5 transform -translate-y-1/2"></span>
                 </div>
             </form>

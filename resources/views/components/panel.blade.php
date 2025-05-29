@@ -1,1 +1,1 @@
-<div {{ $attributes(['class' => 'p-4 bg-white/5 rounded-xl border border-transparent hover:border-blue group transition-colors duration-300']) }}>{{ $slot }}</div>
+<div {{ $attributes(['class' => 'p-4 bg-white/5 rounded-xl border border-transparent hover:border-main group transition-colors duration-300']) }}>{{ $slot }}</div>
