@@ -23,10 +23,10 @@
         </div>
 
         <div class="space-x-6 font-bold">
-            <a href="#">Jobs</a>
-            <a href="#">Careers</a>
-            <a href="#">Salaries</a>
-            <a href="#">Companies</a>
+            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Jobs</a>
+            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Careers</a>
+            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Salaries</a>
+            <a href="#" class="hover:text-blue-600 transition-colors duration-300">Companies</a>
         </div>
 
         <div>
