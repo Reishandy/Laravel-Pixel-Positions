@@ -20,12 +20,12 @@ Route::controller(EmployerController::class)->group(function () {
 });
 
 Route::controller(RegisteredUserController::class)->group(function () {
-    Route::get('/register', 'create')->name('register');
-    Route::post('/register', 'store');
+    Route::get('/register', 'create')->middleware(['guest'])->name('register');
+    Route::post('/register', 'store')->middleware(['guest']);
 });
 
 Route::controller(SessionController::class)->group(function () {
-    Route::get('/login', 'create')->name('login');
-    Route::post('/login', 'store');
-    Route::delete('/logout', 'destroy');
+    Route::get('/login', 'create')->middleware(['guest'])->name('login');
+    Route::post('/login', 'store')->middleware(['guest']);
+    Route::delete('/logout', 'destroy')->middleware(['auth'])->name('logout');
 });

@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Country;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,7 +23,7 @@ class EmployerFactory extends Factory
         return [
             'user_id' => User::factory(),
             'name' => fake()->company(),
-            'logo' => 'https://picsum.photos/seed/'.rand(1000, 9999).'/100',
+            'logo' => 'default',
             'country_code' => fake()->randomElement($countryCodes)
         ];
     }

@@ -28,7 +28,7 @@ class StoreRegisteredUserRequest extends FormRequest
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed', Password::min(6)],
             'employer' => ['required', 'string', 'max:255', 'unique:employers,name'],
-            'logo' => ['required', File::image()->max(2048)], // 2MB max
+            'logo' => ['nullable', File::image()->max(2048)], // 2MB max
             'country_code' => ['required', 'string', 'size:2'],
         ];
     }
@@ -54,6 +54,7 @@ class StoreRegisteredUserRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'password.confirmed' => 'The password does not match',
             'logo.required' => 'A company logo is required.',
             'logo.image' => 'The file must be an image (jpeg, png, bmp, gif, svg, or webp).',
             'logo.max' => 'The logo must not be larger than 2MB.',

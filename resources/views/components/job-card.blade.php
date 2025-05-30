@@ -16,6 +16,6 @@
             @endforeach
         </div>
 
-        <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }} Logo" class="rounded-xl w-[42px]">
+        <x-logo :logo="$job->employer->logo" :name="$job->employer->name" size="w-[42px]"/>
     </div>
 </x-panel>

@@ -12,8 +12,8 @@
         <x-forms.input label="Company Name" name="employer" placeholder="Your Company Name"/>
         <div>
             <x-forms.input label="Company Logo" name="logo" type="file"/>
-            <div class="mt-2 ml-2 text-sm text-gray-400">
-                Maximum file size: 2MB
+            <div class="mt-2 text-gray-400">
+                (Optional) Maximum file size: 2MB
             </div>
         </div>
 
