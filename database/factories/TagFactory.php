@@ -9,6 +9,17 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class TagFactory extends Factory
 {
+    protected $jobTags = [
+        'PHP', 'Laravel', 'JavaScript', 'React', 'Vue.js', 'Angular',
+        'Python', 'Django', 'Node.js', 'TypeScript', 'AWS', 'Docker',
+        'DevOps', 'CI/CD', 'Frontend', 'Backend', 'Full Stack', 'Mobile',
+        'iOS', 'Android', 'SQL', 'NoSQL', 'MongoDB', 'PostgreSQL',
+        'MySQL', 'Redis', 'Git', 'Agile', 'Scrum', 'Remote', 'Kubernetes',
+        'Cloud', 'API', 'Microservices', 'Testing', 'UI/UX', 'GraphQL',
+        'REST', 'Security', 'Analytics', 'Machine Learning', 'AI',
+        'Blockchain', 'Java', 'C#', '.NET', 'Go', 'Ruby', 'Rails'
+    ];
+
     /**
      * Define the model's default state.
      *
@@ -17,7 +28,7 @@ class TagFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->word
+            'name' => $this->faker->unique()->randomElement($this->jobTags)
         ];
     }
 }

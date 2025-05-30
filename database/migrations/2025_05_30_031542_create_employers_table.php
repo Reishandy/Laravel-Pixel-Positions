@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->string('name');
+            $table->string('country_code', 2);
             $table->string('logo');
             $table->timestamps();
         });

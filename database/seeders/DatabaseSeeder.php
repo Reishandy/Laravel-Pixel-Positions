@@ -24,15 +24,15 @@ class DatabaseSeeder extends Seeder
             'password' => '12345678'
         ]);
 
-        $tags = Tag::factory(25)->create();
+        $tags = Tag::factory(48)->create(); // Match tags
 
         // Create a job for the test user and assign random tags
         $job = Job::factory()->create(['employer_id' => Employer::factory()->create(['user_id' => 1])]);
         $job->tags()->attach($tags->random(3));
 
         // Random population
-        Job::factory(10)->create()->each(function ($job) use ($tags) {
-            $job->tags()->attach($tags->random(rand(1, 5)));
+        Job::factory(20)->create()->each(function ($job) use ($tags) {
+            $job->tags()->attach($tags->random(rand(2, 5)));
         });
     }
 }

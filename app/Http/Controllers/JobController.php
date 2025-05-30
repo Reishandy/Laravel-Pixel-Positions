@@ -15,9 +15,11 @@ class JobController extends Controller
      */
     public function index(): View
     {
-        return view('jobs.index', [
-            'jobs' => Job::with('employer')->with('tags')->latest()->paginate(10),
-            'featuredJobs' => Job::with('employer')->with('tags')->where('featured', true)->latest()->take(3)->get(),
+        $jobs = Job::with('employer')->with('tags');
+
+        return view('job.index', [
+            'jobs' => $jobs->latest()->paginate(10),
+            'featuredJobs' => $jobs->where('featured', true)->latest()->get(),
             'tags' => Tag::all()
         ]);
     }

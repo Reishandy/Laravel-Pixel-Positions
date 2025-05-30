@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreEmployerRequest;
-use App\Http\Requests\UpdateEmployerRequest;
-use App\Models\Employer;
+use App\Models\Tag;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class EmployerController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +27,7 @@ class EmployerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreEmployerRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -36,18 +35,18 @@ class EmployerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Employer $employer): View
+    public function show(Tag $tag): View
     {
-        return view('employer.show', [
-            'employer' => $employer,
-            'jobs' => $employer->jobs()->with('employer')->with('tags')->latest()->paginate(10)
+        return view('tag.show', [
+            'tag' => $tag,
+            'jobs' => $tag->jobs()->with('employer')->with('tags')->latest()->paginate(10)
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Employer $employer)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -55,7 +54,7 @@ class EmployerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateEmployerRequest $request, Employer $employer)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -63,7 +62,7 @@ class EmployerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Employer $employer)
+    public function destroy(Tag $tag)
     {
         //
     }

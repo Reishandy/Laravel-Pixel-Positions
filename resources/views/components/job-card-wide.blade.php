@@ -2,12 +2,12 @@
 
 <x-panel class="flex gap-6">
     <div>
-        <x-employer-logo :dimension="90"></x-employer-logo>
+        <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }} Logo" class="rounded-xl w-[90px]">
     </div>
 
     <div class="flex flex-col md:flex-row md:w-full md:justify-between">
         <div class="flex-1">
-            <a href="#" class="self-start text-sm text-gray">{{ $job->employer->name }}</a>
+            <a href="/company/{{ $job->employer->name }}" class="self-start text-sm text-gray hover:text-white transition-colors duration-300">{{ $job->employer->name }}</a>
 
             <h3 class="font-bold text-xl mt-1 group-hover:text-main transition-colors duration-300">{{ $job->title }}</h3>
 

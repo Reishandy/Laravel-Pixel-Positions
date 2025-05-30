@@ -1,7 +1,7 @@
 @props(['job'])
 
 <x-panel class="flex flex-col text-center items-center">
-    <div class="self-start text-sm">{{ $job->employer->name }}</div>
+    <a href="/company/{{ $job->employer->name }}" class="self-start text-sm text-gray hover:text-white transition-colors duration-300">{{ $job->employer->name }}</a>
 
     <div class="py-8 w-full max-w-xs">
         <h3 class="text-2xl font-bold group-hover:text-main transition-colors duration-300">{{ $job->title }}</h3>
@@ -16,6 +16,6 @@
             @endforeach
         </div>
 
-        <x-employer-logo :dimension="42"></x-employer-logo>
+        <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }} Logo" class="rounded-xl w-[42px]">
     </div>
 </x-panel>

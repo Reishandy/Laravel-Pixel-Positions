@@ -16,8 +16,8 @@ class Job extends Model
 
     public function getFormattedSalaryAttribute(): string
     {
-        $currencyFormatter = new Currency();
-        return $currencyFormatter->format($this-> currency, $this->salary);
+        $currencyFormatter = new Country();
+        return $currencyFormatter->format($this->employer->country_code, $this->salary);
     }
 
     public function employer(): BelongsTo

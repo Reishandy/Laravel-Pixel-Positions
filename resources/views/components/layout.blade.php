@@ -26,10 +26,10 @@
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-6 font-bold">
-                <a href="#" class="hover:text-main transition-colors duration-300">Jobs</a>
+                <a href="/" class="hover:text-main transition-colors duration-300">Jobs</a>
                 <a href="#" class="hover:text-main transition-colors duration-300">Careers</a>
                 <a href="#" class="hover:text-main transition-colors duration-300">Salaries</a>
-                <a href="#" class="hover:text-main transition-colors duration-300">Companies</a>
+                <a href="#" class="hover:text-main transition-colors duration-300">Companies</a> {{-- // TODO: index --}}
             </div>
 
             <div class="hidden md:block">
@@ -54,7 +54,7 @@
              class="max-h-0 overflow-hidden opacity-0 -translate-y-2 transition-all duration-300 ease-in-out md:hidden border-b border-white/10 mobile-menu">
             <div class="py-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Jobs</a>
+                    <a href="/" class="hover:text-main transition-colors duration-300 font-bold">Jobs</a>
                     <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Careers</a>
                     <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Salaries</a>
                     <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Companies</a>

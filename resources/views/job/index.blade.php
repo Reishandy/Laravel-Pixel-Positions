@@ -26,7 +26,7 @@
             <x-section-heading>Tags</x-section-heading>
 
             <div class="flex flex-wrap gap-3 mt-6">
-                @foreach($tags as $tag)
+                @foreach($tags->sortBy('name') as $tag)
                     <x-tag :tag="$tag" />
                 @endforeach
             </div>
