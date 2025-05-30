@@ -9,13 +9,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(JobController::class)->group(function () {
     Route::get('/', 'index')->name('home');
+    Route::get('/job/search', 'search')->name('search-job');
 });
 
-Route::controller(TagController::class)->group(function () {
-    Route::get('/tag/{tag:name}', 'show');
-});
+Route::get('/tag/{tag:name}', [TagController::class, 'show']);
 
 Route::controller(EmployerController::class)->group(function () {
+    Route::get('/companies/', 'index')->name('companies');
+    Route::get('/company/search', 'search')->name('search-company');
     Route::get('/company/{employer:name}', 'show');
 });
 

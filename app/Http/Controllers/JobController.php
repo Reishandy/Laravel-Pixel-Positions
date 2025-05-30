@@ -10,6 +10,14 @@ use Illuminate\Contracts\View\View;
 
 class JobController extends Controller
 {
+    public function search(): View
+    {
+        return view('job.search', [
+            'jobs' => Job::with('employer')->with('tags')->where('title', 'LIKE', '%'.request('query').'%')->latest()->paginate(10),
+            'query' => request('query')
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      */

@@ -30,11 +30,8 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex space-x-6 font-bold">
-                    <a href="/" class="hover:text-main transition-colors duration-300">Jobs</a>
-                    <a href="#" class="hover:text-main transition-colors duration-300">Careers</a>
-                    <a href="#" class="hover:text-main transition-colors duration-300">Salaries</a>
-                    <a href="#"
-                       class="hover:text-main transition-colors duration-300">Companies</a> {{-- // TODO: index --}}
+                    <a href="{{ route('home') }}" class="hover:text-main transition-colors duration-300">Jobs</a>
+                    <a href="{{ route('companies') }}" class="hover:text-main transition-colors duration-300">Companies</a>
                 </div>
             </div>
 
@@ -81,10 +78,8 @@
              class="max-h-0 overflow-hidden opacity-0 -translate-y-2 transition-all duration-300 ease-in-out lg:hidden mobile-menu">
             <div class="py-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="/" class="hover:text-main transition-colors duration-300 font-bold">Jobs</a>
-                    <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Careers</a>
-                    <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Salaries</a>
-                    <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Companies</a>
+                    <a href="{{ route('home') }}" class="hover:text-main transition-colors duration-300 font-bold">Jobs</a>
+                    <a href="{{ route('companies') }}" class="hover:text-main transition-colors duration-300 font-bold">Companies</a>
 
                     <div class="bg-white/10 mb-4 h-px w-full"></div>
 
