@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
           rel="stylesheet">
 
+    <link rel="icon" href="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/favicon.svg') }}" type=image/svg">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-black text-white">
