@@ -1,8 +1,8 @@
 @props(['job'])
 
 <x-panel class="flex gap-6">
-    <div>
-        <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }} Logo" class="rounded-xl w-[90px]">
+    <div class="flex-shrink-0 w-[60px] sm:w-[90px]">
+        <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }} Logo" class="rounded-xl w-full">
     </div>
 
     <div class="flex flex-col md:flex-row md:w-full md:justify-between">
