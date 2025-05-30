@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\File;
 use Illuminate\Validation\Rules\Password;
 
 class StoreRegisteredUserRequest extends FormRequest
@@ -27,7 +28,7 @@ class StoreRegisteredUserRequest extends FormRequest
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed', Password::min(6)],
             'employer' => ['required', 'string', 'max:255', 'unique:employers,name'],
-            'logo' => ['required', 'image', 'max:2048'], // 2MB max
+            'logo' => ['required', File::image()->max(2048)], // 2MB max
             'country_code' => ['required', 'string', 'size:2'],
         ];
     }

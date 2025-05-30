@@ -10,7 +10,12 @@
         <x-forms.divider/>
 
         <x-forms.input label="Company Name" name="employer" placeholder="Your Company Name"/>
-        <x-forms.input label="Company Logo" name="logo" type="file"/>
+        <div>
+            <x-forms.input label="Company Logo" name="logo" type="file"/>
+            <div class="mt-2 ml-2 text-sm text-gray-400">
+                Maximum file size: 2MB
+            </div>
+        </div>
 
         <x-forms.select label="Origin Country" name="country_code">
             <option value="">Select a country</option>
