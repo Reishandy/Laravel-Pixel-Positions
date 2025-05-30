@@ -60,7 +60,7 @@
                     @endforeach
                 </div>
 
-                <div class="my-6">
+                <div class="mt-6">
                     {{ $jobs->links() }}
                 </div>
             @else

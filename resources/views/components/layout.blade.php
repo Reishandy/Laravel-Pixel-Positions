@@ -14,7 +14,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white pb-20">
 
 <div class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
     <div class="px-4 sm:px-10">
@@ -36,7 +36,7 @@
 
             <div class="hidden md:block">
                 <div class="inline-flex items-center gap-x-2">
-                    <span class="w-3 h-3 bg-main inline-block"></span>
+                    <x-dot/>
                     <a href="#" class="hover:text-main transition-colors duration-300">Post a Job</a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Salaries</a>
                     <a href="#" class="hover:text-main transition-colors duration-300 font-bold">Companies</a>
                     <div class="inline-flex items-center gap-x-2">
-                        <span class="w-3 h-3 bg-main inline-block"></span>
+                        <x-dot/>
                         <a href="#" class="hover:text-main transition-colors duration-300">Post a Job</a>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ class Employer extends Model
     /** @use HasFactory<\Database\Factories\EmployerFactory> */
     use HasFactory;
 
-    protected $fillable = ['user_id', 'name', 'logo'];
+    protected $fillable = ['user_id', 'name', 'logo', 'country_code'];
 
     public function getRouteKeyName()
     {
