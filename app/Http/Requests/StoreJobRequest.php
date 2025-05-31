@@ -11,8 +11,8 @@ class StoreJobRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        // TODO:
-        return false;
+        // Use policy to check if user can create a job
+        return $this->user() && $this->user()->can('create', \App\Models\Job::class);
     }
 
     /**

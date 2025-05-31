@@ -11,8 +11,9 @@ class UpdateJobRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        // TODO:
-        return false;
+        // Use policy to check if user can update the job
+        $job = $this->route('job');
+        return $job && $this->user() && $this->user()->can('update', $job);
     }
 
     /**
