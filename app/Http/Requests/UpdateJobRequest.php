@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateJobRequest extends FormRequest
 {
@@ -24,7 +25,42 @@ class UpdateJobRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => ['required', 'string', 'max:255'],
+            'salary' => ['required', 'numeric', 'min:0', 'max:999999999.99'],
+            'location' => ['required', 'string', 'max:255'],
+            'schedule' => ['required', 'string', Rule::in(['Remote', 'Office', 'Hybrid'])],
+            'url' => ['required', 'url', 'max:255'],
+            'tags' => ['nullable', 'array'],
+            'tags.*' => ['exists:tags,id'],
+            'featured' => ['boolean', 'nullable'],
+        ];
+    }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array<string, string>
+     */
+    public function attributes(): array
+    {
+        return [
+            'url' => 'job URL',
+            'tags.*' => 'selected tag',
+        ];
+    }
+
+    /**
+     * Get custom messages for validator errors.
+     *
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'salary.min' => 'The salary must be a positive number.',
+            'schedule.in' => 'The schedule must be Remote, Office, or Hybrid.',
+            'url.url' => 'Please enter a valid URL including http:// or https://.',
+            'tags.*.exists' => 'One or more selected tags are invalid.',
         ];
     }
 }

@@ -29,7 +29,7 @@ class StoreJobRequest extends FormRequest
             'location' => ['required', 'string', 'max:255'],
             'schedule' => ['required', 'string', Rule::in(['Remote', 'Office', 'Hybrid'])],
             'url' => ['required', 'url', 'max:255'],
-            'tags' => ['nullable', 'array'],
+            'tags' => ['nullable', 'min:1'],
             'tags.*' => ['exists:tags,id'],
             'featured' => ['boolean', 'nullable'],
         ];

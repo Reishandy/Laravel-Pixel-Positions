@@ -25,4 +25,12 @@ class JobPolicy
         // Allow update only if the user owns the employer associated with the job
         return $job->employer && $job->employer->user_id === $user->id;
     }
+
+    /**
+     * Determine whether the user can delete the model.
+     */
+    public function delete(User $user, Job $job): bool
+    {
+        return $job->employer && $job->employer->user_id === $user->id;
+    }
 }

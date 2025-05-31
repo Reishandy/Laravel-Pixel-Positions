@@ -16,6 +16,18 @@ Route::controller(JobController::class)->group(function () {
     Route::post('/job', 'store')
         ->middleware(['auth'])
         ->name('store-job');
+    Route::get('/job/{job}/edit', 'edit')
+        ->middleware(['auth'])
+        ->can('update')
+        ->name('edit-job');
+    Route::post('/job/{job}', 'update')
+        ->middleware(['auth'])
+        ->can('update')
+        ->name('update-job');
+    Route::delete('/job/{job}', 'destroy')
+        ->middleware(['auth'])
+        ->can('delete')
+        ->name('destroy-job');
 });
 
 Route::get('/tag/{tag:name}', [TagController::class, 'show']);
