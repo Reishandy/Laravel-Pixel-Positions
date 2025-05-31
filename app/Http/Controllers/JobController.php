@@ -51,8 +51,7 @@ class JobController extends Controller
         $validated = $request->validated();
 
         // Create the job
-        $job = Job::create([
-            'employer_id' => Auth::user()->employer->id,
+        $job = Auth::user()->employer->jobs()->create([
             'title' => $validated['title'],
             'salary' => $validated['salary'],
             'location' => $validated['location'],
