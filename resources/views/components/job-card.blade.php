@@ -13,7 +13,7 @@
 
     <div class="flex justify-between items-center mt-auto w-full">
         <div class="flex flex-wrap gap-2 h-max">
-            @foreach($job->tags as $tag)
+            @foreach($job->tags->take(3) as $tag)
                 <x-tag :tag="$tag" size="small" />
             @endforeach
         </div>

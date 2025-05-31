@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="mt-3 lg:mt-0 flex flex-wrap gap-2 h-max">
+        <div class="mt-3 lg:mt-0 lg:ml-4 flex flex-wrap gap-2 h-max lg:w-xl justify-end">
             @foreach($job->tags as $tag)
                 <x-tag :tag="$tag" />
             @endforeach
