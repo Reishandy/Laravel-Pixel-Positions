@@ -27,11 +27,11 @@ class StoreJobRequest extends FormRequest
             'title' => ['required', 'string', 'max:255'],
             'salary' => ['required', 'numeric', 'min:0', 'max:999999999.99'],
             'location' => ['required', 'string', 'max:255'],
-            'schedule' => ['required', 'string', Rule::in(['Remote', 'Office', 'Hybrid'])],
+            'schedule' => ['required', 'string', Rule::in(['Part Time', 'Full Time'])],
             'url' => ['required', 'url', 'max:255'],
             'tags' => ['nullable', 'min:1'],
             'tags.*' => ['exists:tags,id'],
-            'featured' => ['boolean', 'nullable'],
+            'featured' => ['nullable'],
         ];
     }
 
@@ -61,5 +61,16 @@ class StoreJobRequest extends FormRequest
             'url.url' => 'Please enter a valid URL including http:// or https://.',
             'tags.*.exists' => 'One or more selected tags are invalid.',
         ];
+    }
+
+    /**
+     * Prepare the data for validation.
+     */
+    protected function prepareForValidation(): void
+    {
+        // Convert "on" to true for featured checkbox
+        if ($this->featured === 'on') {
+            $this->merge(['featured' => true]);
+        }
     }
 }

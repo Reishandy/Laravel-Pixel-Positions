@@ -12,7 +12,7 @@ class Job extends Model
     /** @use HasFactory<\Database\Factories\JobFactory> */
     use HasFactory;
 
-    protected $fillable = ['employer_id', 'title', 'salary', 'currency'];
+    protected $fillable = ['employer_id', 'title', 'salary', 'currency', 'location', 'url', 'schedule', 'featured'];
 
     public function getFormattedSalaryAttribute(): string
     {

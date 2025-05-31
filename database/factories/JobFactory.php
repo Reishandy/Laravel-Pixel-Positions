@@ -35,7 +35,7 @@ class JobFactory extends Factory
             'employer_id' => Employer::factory()->create(),
             'title' => $this->faker->randomElement($this->techJobTitles),
             'salary' => round(rand(30000, 200000) / 5000) * 5000,
-            'location' => fake()->randomElement(['Remote', 'Office', 'Hybrid']),
+            'location' => fake()->address(),
             'url' => fake()->url(),
             'schedule' => fake()->randomElement(['Full Time', 'Part Time']),
             'featured' => fake()->boolean(30)

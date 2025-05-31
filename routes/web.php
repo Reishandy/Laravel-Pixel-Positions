@@ -18,15 +18,15 @@ Route::controller(JobController::class)->group(function () {
         ->name('store-job');
     Route::get('/job/{job}/edit', 'edit')
         ->middleware(['auth'])
-        ->can('update')
+        ->can('update', 'job')
         ->name('edit-job');
     Route::post('/job/{job}', 'update')
         ->middleware(['auth'])
-        ->can('update')
+        ->can('update', 'job')
         ->name('update-job');
     Route::delete('/job/{job}', 'destroy')
         ->middleware(['auth'])
-        ->can('delete')
+        ->can('delete', 'job')
         ->name('destroy-job');
 });
 

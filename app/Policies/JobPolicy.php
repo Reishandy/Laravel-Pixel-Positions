@@ -22,8 +22,7 @@ class JobPolicy
      */
     public function update(User $user, Job $job): bool
     {
-        // Allow update only if the user owns the employer associated with the job
-        return $job->employer && $job->employer->user_id === $user->id;
+        return $job->employer->id == $user->employer->id;
     }
 
     /**
@@ -31,6 +30,6 @@ class JobPolicy
      */
     public function delete(User $user, Job $job): bool
     {
-        return $job->employer && $job->employer->user_id === $user->id;
+        return $job->employer->id == $user->employer->id;
     }
 }

@@ -10,9 +10,8 @@
         <x-forms.divider/>
 
         <x-forms.select label="Schedule" name="schedule">
-            <option value="Remote">Remote</option>
-            <option value="Office">Office</option>
-            <option value="Hybrid">Hybrid</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Full Time">Full Time</option>
         </x-forms.select>
 
         <x-forms.tag-checkboxes label="Tags" name="tags" :tags="$tags" />

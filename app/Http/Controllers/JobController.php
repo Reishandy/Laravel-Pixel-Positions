@@ -27,7 +27,7 @@ class JobController extends Controller
     {
         return view('job.index', [
             'jobs' => Job::with('employer')->with('tags')->latest()->paginate(10),
-            'featuredJobs' => Job::with('employer')->with('tags')->where('featured', true)->latest()->get(),
+            'featuredJobs' => Job::with('employer')->with('tags')->where('featured', true)->latest()->take(9)->get(),
             'tags' => Tag::all()
         ]);
     }
@@ -51,19 +51,16 @@ class JobController extends Controller
         $validated = $request->validated();
 
         // Create the job
-        $job = new Job([
+        $job = Job::create([
+            'employer_id' => Auth::user()->employer->id,
             'title' => $validated['title'],
             'salary' => $validated['salary'],
-            'currency' => Auth::user()->employer->currency,
             'location' => $validated['location'],
             'url' => $validated['url'],
             'schedule' => $validated['schedule'],
+            'currency' => Auth::user()->employer->country_code,
             'featured' => isset($validated['featured']) ? true : false,
         ]);
-
-        // Associate with employer
-        $job->employer()->associate(Auth::user()->employer);
-        $job->save();
 
         // Attach tags if any
         if (isset($validated['tags'])) {
