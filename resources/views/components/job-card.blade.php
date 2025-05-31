@@ -4,7 +4,9 @@
     <a href="/company/{{ $job->employer->name }}" class="self-start text-sm text-gray hover:text-white transition-colors duration-300">{{ $job->employer->name }}</a>
 
     <div class="py-8 w-full max-w-xs">
-        <h3 class="text-2xl font-bold group-hover:text-main transition-colors duration-300">{{ $job->title }}</h3>
+        <h3 class="text-2xl font-bold group-hover:text-main transition-colors duration-300">
+            <a href="{{ $job->url }}">{{ $job->title }}</a>
+        </h3>
 
         <p class="text-sm mt-4">{{ $job->schedule }} - From {{ $job->formatted_salary }}</p>
     </div>

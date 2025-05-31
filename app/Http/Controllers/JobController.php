@@ -66,7 +66,7 @@ class JobController extends Controller
             $job->tags()->attach($validated['tags']);
         }
 
-        return redirect()->route('home')->with('success', 'Job posted successfully!');
+        return redirect()->route('home');
     }
 
     /**
@@ -114,7 +114,7 @@ class JobController extends Controller
             $job->tags()->detach();
         }
 
-        return redirect()->route('home')->with('success', 'Job updated successfully!');
+        return redirect()->route('home');
     }
 
     /**
@@ -125,6 +125,6 @@ class JobController extends Controller
         // Delete the job
         $job->delete();
 
-        return redirect()->route('home')->with('success', 'Job deleted successfully!');
+        return redirect()->route('home');
     }
 }
