@@ -5,7 +5,7 @@
         <x-logo :logo="$job->employer->logo" :name="$job->employer->name" size="w-full"/>
     </div>
 
-    <div class="flex flex-col lg:flex-row lg:w-full lg:justify-between">
+    <div class="flex flex-col lg:flex-row md:w-full lg:justify-between ">
         <div class="flex-1">
             <a href="/company/{{ $job->employer->name }}" class="self-start text-sm text-gray hover:text-white transition-colors duration-300">{{ $job->employer->name }}</a>
 
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="mt-3 lg:mt-0 lg:ml-4 flex flex-wrap gap-2 h-max lg:w-xl justify-end">
+        <div class="mt-3 lg:mt-0 lg:ml-4 flex flex-wrap gap-2 h-max lg:w-md justify-end">
             @foreach($job->tags as $tag)
                 <x-tag :tag="$tag" />
             @endforeach
