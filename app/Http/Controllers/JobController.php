@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateJobRequest;
 use App\Models\Job;
 use App\Models\Tag;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Auth;
 
 class JobController extends Controller
 {
@@ -33,9 +34,12 @@ class JobController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
-        //
+        return view('job.create', [
+            'country_code' => Auth::user()->employer->country_code,
+            'tags' => Tag::all()
+        ]);
     }
 
     /**

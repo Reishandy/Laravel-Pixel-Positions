@@ -10,8 +10,12 @@ use Illuminate\Support\Facades\Route;
 Route::controller(JobController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('/job/search', 'search')->name('search-job');
-    Route::get('/job/create', 'create')->name('create-job');
-    Route::get('/job/search', 'search')->name('search-job');
+    Route::get('/job/create', 'create')
+        ->middleware(['auth'])
+        ->name('create-job');
+    Route::post('/job', 'store')
+        ->middleware(['auth'])
+        ->name('store-job');
 });
 
 Route::get('/tag/{tag:name}', [TagController::class, 'show']);

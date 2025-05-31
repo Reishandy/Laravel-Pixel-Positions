@@ -47,7 +47,7 @@
                     <div class="flex items-center gap-x-4">
                         <div class="flex items-center gap-x-2">
                             <x-dot/>
-                            <a href="#" class="hover:text-main transition-colors duration-300">Post a Job</a>
+                            <a href="{{ route('create-job') }}" class="hover:text-main transition-colors duration-300">Post a Job</a>
                         </div>
 
                         <x-forms.form method="POST" action="{{ route('logout') }}">
@@ -93,7 +93,7 @@
                             <div class="flex flex-col items-start space-y-3">
                                 <div class="flex items-center gap-x-2">
                                     <x-dot/>
-                                    <a href="#" class="hover:text-main transition-colors duration-300">Post a Job</a>
+                                    <a href="{{ route('create-job') }}" class="hover:text-main transition-colors duration-300">Post a Job</a>
                                 </div>
 
                                 <x-forms.form method="POST" action="{{ route('logout') }}" class="w-full ms-0">

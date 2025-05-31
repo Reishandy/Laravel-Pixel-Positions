@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('salary', 12, 2);
             $table->string('currency', 3)->default('USD'); // ISO 4217 currency code
             $table->string('location');
+            $table->string('url');
             $table->string('schedule')->default('Full Time'); // Should be an Enum but...
             $table->boolean('featured')->default(false);
             $table->timestamps();
