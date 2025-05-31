@@ -10,7 +10,7 @@
             <a href="/company/{{ $job->employer->name }}" class="self-start text-sm text-gray hover:text-white transition-colors duration-300">{{ $job->employer->name }}</a>
 
             <h3 class="font-bold text-xl mt-1 group-hover:text-main transition-colors duration-300">
-                <a href="{{ $job->url }}">{{ $job->title }}</a>
+                <a href="{{ $job->url }}" target="_blank">{{ $job->title }}</a>
             </h3>
 
             <p class="text-sm text-gray mt-auto">{{ $job->schedule }} - From {{ $job->formatted_salary }} - At {{ $job->location }}</p>
