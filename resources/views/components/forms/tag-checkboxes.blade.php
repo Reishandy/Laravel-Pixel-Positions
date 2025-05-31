@@ -1,4 +1,4 @@
-@props(['label', 'name', 'tags'])
+@props(['label', 'name', 'tags', 'selected' => []])
 
 <div>
     @if($label)
@@ -13,7 +13,7 @@
                            name="{{ $name }}[]"
                            id="tag-{{ $tag->id }}"
                            value="{{ $tag->id }}"
-                           {{ in_array($tag->id, old($name, [])) ? 'checked' : '' }}>
+                           {{ in_array($tag->id, old($name, $selected)) ? 'checked' : '' }}>
                     <label for="tag-{{ $tag->id }}" class="pl-1 cursor-pointer">{{ $tag->name }}</label>
                 </div>
             @endforeach
