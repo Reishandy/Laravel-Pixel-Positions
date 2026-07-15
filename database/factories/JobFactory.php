@@ -36,7 +36,7 @@ class JobFactory extends Factory
             'title' => $this->faker->randomElement($this->techJobTitles),
             'salary' => round(rand(30000, 200000) / 5000) * 5000,
             'location' => fake()->address(),
-            'url' => 'https://reishandy.my.id',
+            'url' => 'https://reishandy.id',
             'schedule' => fake()->randomElement(['Full Time', 'Part Time']),
             'featured' => fake()->boolean(30)
         ];
